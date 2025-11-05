@@ -169,3 +169,18 @@ AWS billing console. Invoices, spending breakdowns, payment methods.
 **SES vs SendGrid/Mailgun:** SendGrid has easier UI. SES cheaper at scale but needs code.
 
 **Why I chose it:** Own domain, want email without paying Google. WorkMail + SES = $4/month total.
+
+---
+
+## Bedrock
+Managed LLM service. Access to models from Anthropic (Claude), Meta (Llama), Amazon (Titan), and now OpenAI (GPT)! Pay per token (input/output).
+
+**vs SageMaker:** For training/hosting your own custom models.
+
+**vs external APIs:** Bedrock keeps data in AWS. Integrates easily with AWS services.
+
+**vs self-hosted LLMs:** Gives you full control but requires GPU instances and ML ops. Bedrock is serverless, pay per token.
+
+**vs Lambda w/ external LLM APIs:** Can call LLM from Lambda, but adds latency and data leaves AWS.
+
+**Why I chose it:** Built agentic AI for document processing. Used Claude via Bedrock to read/summarize documents.
